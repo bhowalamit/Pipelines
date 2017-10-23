@@ -7,10 +7,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-                sh '''
-                    echo 'Hello'
-                    echo 'World'
-                ''' 
+                echo 'Hello World' 
             }
         }
 
