@@ -16,6 +16,8 @@ pipeline {
 
         stage ('Build') {
             steps {
+                sh '$ mvn archetype:generate -DgroupId=com.mkyong.core.utils -DartifactId=dateUtils
+ -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false'
                 sh 'mvn -Dmaven.test.failure.ignore=true install' 
             }
             post {
